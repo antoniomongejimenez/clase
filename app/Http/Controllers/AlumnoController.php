@@ -106,4 +106,12 @@ class AlumnoController extends Controller
         }
         return redirect()->route('alumnos.index')->with('error', 'Este alumno tiene notas asociadas.');
     }
+
+
+    public function criterios(Alumno $alumno)
+    {
+        return view('alumnos.criterios', [
+            'notas' => $alumno->notas,
+        ]);
+    }
 }

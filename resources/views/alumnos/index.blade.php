@@ -23,6 +23,9 @@
                                         <td class="px-6 py-4">
                                            <a href="{{ route('alumnos.edit', $alumno) }}" class="mt-4 text-blue-900 hover:underline">Editar</a>
                                         </td>
+                                        <td class="px-6 py-4">
+                                            <a href="{{ route('alumnos.criterios', $alumno) }}" class="mt-4 text-blue-900 hover:underline">Criterios</a>
+                                         </td>
                                         <td>
                                             <div class="text-sm text-gray-900 ">
                                                 <form action="{{ route('alumnos.destroy', $alumno) }}" method="POST">
