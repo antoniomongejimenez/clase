@@ -20,10 +20,10 @@
                                 </th>
                             </thead>
                             <tbody>
-                                @foreach ($notas as $nota)
+                                @foreach ($notas->groupBy('ccee_id') as $nota)
                                     <tr>
-                                        <td class="px-6 py-2">{{ $nota->ccee->ce }}</td>
-                                        <td class="px-6 py-2">{{ $nota->nota }}</td>
+                                        <td class="px-6 py-2">{{ $nota->first()->ccee->ce}}</td>
+                                        <td class="px-6 py-2">{{ $nota->max('nota') }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>

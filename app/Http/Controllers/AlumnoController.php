@@ -59,7 +59,9 @@ class AlumnoController extends Controller
     public function show(Alumno $alumno)
     {
         return view('alumnos.show', [
-            'alumno' => $alumno,
+            'notafinal' => 0,
+            'contador' => 0,
+            'notas' => $alumno->notas->groupBy('ccee_id'),
         ]);
     }
 

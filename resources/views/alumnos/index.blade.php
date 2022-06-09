@@ -36,7 +36,7 @@
                                             </div>
                                         </td>
                                         <td>
-                                            <a href="{{ route('alumnos.show', $alumno) }}" class="mt-4 text-blue-900 hover:underline">Mostrar</a>
+                                            <a href="{{ route('alumnos.show', $alumno) }}" class="mt-4 text-blue-900 hover:underline">Nota final</a>
                                         </td>
                                     </tr>
                                 @endforeach
