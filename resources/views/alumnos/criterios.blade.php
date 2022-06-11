@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
+            {{ __('Nota de cada criterio') }}
         </h2>
     </x-slot>
 
@@ -20,7 +20,7 @@
                                 </th>
                             </thead>
                             <tbody>
-                                @foreach ($notas->groupBy('ccee_id') as $nota)
+                                @foreach ($notas as $nota)
                                     <tr>
                                         <td class="px-6 py-2">{{ $nota->first()->ccee->ce}}</td>
                                         <td class="px-6 py-2">{{ $nota->max('nota') }}</td>

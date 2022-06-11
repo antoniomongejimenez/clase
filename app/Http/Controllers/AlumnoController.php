@@ -59,8 +59,7 @@ class AlumnoController extends Controller
     public function show(Alumno $alumno)
     {
         return view('alumnos.show', [
-            'notafinal' => 0,
-            'contador' => 0,
+            'coleccionnotafinal' => collect(),
             'notas' => $alumno->notas->groupBy('ccee_id'),
         ]);
     }
@@ -113,7 +112,7 @@ class AlumnoController extends Controller
     public function criterios(Alumno $alumno)
     {
         return view('alumnos.criterios', [
-            'notas' => $alumno->notas,
+            'notas' => $alumno->notas->groupBy('ccee_id'),
         ]);
     }
 }
